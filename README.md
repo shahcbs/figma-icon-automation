@@ -31,7 +31,7 @@ const exporter = figmaApiExporter(process.env.FIGMA_API_TOKEN);
 exporter
   .getSvgs({
     fileId: process.env.FIGMA_FILE_ID,
-    canvas: 'Icons', // Replace 'Icons' with the name of the canvas you want to sync SVGs from
+    canvas: 'Icons', // Replace 'Icons' with the name of the canvas/page you want to sync SVGs from
   })
   .then(svgsData =>
     exporter.downloadSvgs({
