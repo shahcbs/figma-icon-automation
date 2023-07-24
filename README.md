@@ -1,0 +1,6 @@
+# figma-icon-sync
+
+You will need to create an .env file in your root with these:
+  
+    FIGMA_API_KEY = ...
+    FIGMA_FILE_KEY= ...
