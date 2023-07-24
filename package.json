@@ -1,0 +1,17 @@
+{
+    "name": "figma-icon-sync",
+    "version": "0.0.0",
+    "description": "Figma API extract icons from design files into this project.",
+
+    "scripts": {
+        "fetch": "node fetch.js",
+        "clean": "rm -rf fetch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "dotenv": "^16.0.3",
+        "figma-api-exporter": "0.0.2"
+    }
+}
