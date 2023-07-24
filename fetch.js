@@ -1,17 +1,19 @@
-const figmaApiExporter = require('figma-api-exporter').default;
+require('dotenv').config();
 
-const exporter = figmaApiExporter('figd_gVD0cGld4QfB7xI1udcBNCKH2aMnFsY8ltlyfWmm');
+const figmaApiExporter = require('figma-api-exporter').default;
+const exporter = figmaApiExporter(process.env.FIGMA_API_TOKEN);
 
 exporter
   .getSvgs({
-    fileId: 'ICZQcuK2xzGmQpTddTVU2a',
-    canvas: 'figma-icon-sync-test',
+    fileId: process.env.FIGMA_FILE_ID,
+    canvas: 'Icons',
   })
-  .then(async svgsData => {
-    await exporter.downloadSvgs({
-      saveDirectory: './figmaIcons',
+  .then(svgsData =>
+    exporter.downloadSvgs({
+      saveDirectory: './svgsFiles',
       svgsData: svgsData.svgs,
       lastModified: svgsData.lastModified,
       clearDirectory: true,
-    });
-  });
+    })
+  );
+      
