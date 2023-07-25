@@ -2,9 +2,10 @@
     "name": "figma-icon-sync",
     "version": "0.0.0",
     "description": "Figma API extract icons from design files into this project.",
-
     "scripts": {
-        "fetch": "node fetch.js",
+        "fetch": "node bin/fetch.js",
+        "remove-fill": "node bin/clean.js",
+        "generate": "node bin/fetch.js && node bin/clean.js",
         "clean": "rm -rf fetch",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -13,5 +14,14 @@
     "devDependencies": {
         "dotenv": "^16.0.3",
         "figma-api-exporter": "0.0.2"
+    },
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.12",
+        "jsdom": "^22.1.0",
+        "prettier-eslint": "^15.0.1",
+        "svgo": "^3.0.2",
+        "svgpath": "^2.6.0",
+        "svgson": "^5.3.1",
+        "uppercamelcase": "^3.0.0"
     }
 }
