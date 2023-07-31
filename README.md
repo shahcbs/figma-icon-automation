@@ -2,7 +2,7 @@
 
 Make sure you have Node.js and npm installed on your computer. Then, create a new project directory and initialize it with `npm init` to set up a new Node.js project. Next, install the required packages using npm:
 ```bash
-npm install figma-api-exporter dotenv
+npm install
 ```
 
 ### 2. Obtain an API key
