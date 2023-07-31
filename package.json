@@ -3,25 +3,22 @@
     "version": "0.0.0",
     "description": "Figma API extract icons from design files into this project.",
     "scripts": {
-        "fetch": "node bin/fetch.js",
-        "remove-fill": "node bin/clean.js",
-        "generate": "node bin/fetch.js && node bin/clean.js",
+        "fetch": "node bin/fetchIcons.js",
+        "build-icons": "node bin/buildIcons.js",
+        "generate": "node bin/fetchIcons.js && node bin/buildIcons.js",
         "clean": "rm -rf fetch",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "Apache-2.0",
-    "devDependencies": {
-        "dotenv": "^16.0.3",
-        "figma-api-exporter": "0.0.2"
-    },
     "dependencies": {
         "cheerio": "^1.0.0-rc.12",
+        "dotenv": "^16.3.1",
+        "figma-api-exporter": "^0.0.2",
         "jsdom": "^22.1.0",
-        "prettier-eslint": "^15.0.1",
+        "svg-to-pdfkit": "^0.1.8",
         "svgo": "^3.0.2",
         "svgpath": "^2.6.0",
-        "svgson": "^5.3.1",
-        "uppercamelcase": "^3.0.0"
+        "svgson": "^5.3.1"
     }
 }
